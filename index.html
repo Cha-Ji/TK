@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f8fb">
+  <meta name="description" content="TK 태권도장 통합 운영 서비스 MVP 기획안. 출결·차량·승급·회계·학부모 상담·FAQ, 6개 기능을 화면으로 살펴보세요.">
+  <meta property="og:title" content="TK | 아이들에게 집중하는 도장 운영">
+  <meta property="og:description" content="태권도장의 반복 업무를 줄이는 통합 운영 서비스. 여섯 가지 기능을 직접 눌러보는 MVP 기획안입니다.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="noindex,nofollow">
+  <title>TK | 태권도장 통합 운영 서비스 — MVP 기획안</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<header class="topbar">
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="TK 소개 맨 위로"><span class="logo-mark">TK<span class="logo-dot">.</span></span><span class="logo-name">도장 운영 파트너</span></a>
+    <nav class="desktop-nav" aria-label="주요 메뉴"><a href="#story">해결할 문제</a><a href="#modules">주요 기능</a><a href="#demo">화면 체험</a><a href="#plan">개발 계획</a></nav>
+    <a href="#feedback" class="nav-button">의견 보내기 <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyepill"><span class="live-dot"></span>친구 도장과 함께 만드는 서비스 · MVP 제안서</div>
+      <h1>관리에는 <span class="color-accent">적은 시간.</span><br>아이들에게는<br><span class="color-accent">더 많은 시간.</span></h1>
+      <p class="hero-desc">출석부, 차량 탑승표, 승급 심사, 회계 장부, 학부모 상담까지. 매일 반복되는 도장 업무를 <strong>하나의 서비스</strong>에서 관리하면 어떨까요?</p>
+      <div class="hero-cta"><a class="btn primary" href="#demo">6개 화면 직접 체험하기 <span aria-hidden="true">→</span></a><a class="btn secondary" href="#modules">어떤 기능이 있나요?</a></div>
+      <div class="hero-foot"><span>📱 휴대폰·태블릿·PC</span><span class="sep"></span><span>🤝 첫 협력 도장 기본 이용료 무료 계획</span></div>
+    </div>
+    <div class="hero-visual" aria-label="가상 데이터로 제작한 도장 관리 대시보드 이미지">
+      <div class="hero-glow"></div>
+      <div class="dashboard-mock">
+        <aside class="dash-side" aria-hidden="true"><span class="dash-logo">T</span><span>⌂</span><span>♙</span><span>▤</span><span>◫</span><span>◷</span></aside>
+        <div class="dash-main">
+          <div class="dash-header"><div><p class="tiny-label">TK MANAGER / OVERVIEW</p><h2>안녕하세요, 관장님 👋</h2><p class="dash-date">오늘 도장 현황 <span class="sample-chip">예시 데이터</span></p></div><span class="dash-avatar">관</span></div>
+          <div class="dash-stats"><div class="dash-stat"><span>총 관원</span><strong>86<small>명</small></strong><p>수련 중인 관원</p></div><div class="dash-stat"><span>오늘 출석</span><strong class="green">71<small>명</small></strong><p>진행 중</p></div><div class="dash-stat"><span>확인할 상담</span><strong>02<small>건</small></strong><p>답변 대기</p></div></div>
+          <div class="dash-bottom"><div class="dash-panel"><div class="panel-title">오늘 출결 현황 <strong>83%</strong></div><div class="bar"><span style="width:83%"></span></div><div class="mini-row"><span>차량 탑승 확인</span><b class="green-text">정상 진행</b></div><div class="mini-row"><span>이번 주 심사 예정</span><b>8명</b></div></div><div class="dash-panel"><div class="panel-title">확인할 업무</div><div class="mini-row"><span>수련비 미납</span><b>5건</b></div><div class="mini-row"><span>학부모 상담</span><b>2건</b></div><div class="mini-row"><span>공지 확인 요청</span><b>3건</b></div></div></div>
+        </div>
+      </div>
+      <div class="float-alert"><span class="float-ico">💬</span><div><strong>학부모 문의 자동 분류</strong><small>간단한 질문은 바로 안내, 중요한 상담은 전달</small></div></div>
+      <div class="hero-visual-caption">화면은 서비스 구상을 보여주는 목업이며 실제 데이터와 연결되지 않습니다.</div>
+    </div>
+  </div>
+</section>
+
+<section class="story section white" id="story">
+  <div class="wrap">
+    <div class="section-intro"><span class="kicker">WHY WE BUILD</span><h2>가르치는 일에 집중하려면,<br>관리하는 일부터 간단해야 합니다.</h2><p>이런 순간들이 반복된다면 도장 운영의 부담을 줄일 수 있습니다. 실제 불편은 함께 이야기하면서 확인하려고 합니다.</p></div>
+    <div class="pain-grid">
+      <article class="pain-card"><div class="round-ico lavender">📚</div><h3>여러 곳에 흩어진 기록</h3><p>출결은 출석부, 차량은 종이 표, 수납은 엑셀, 상담은 카톡에 있으면 관원 정보를 매번 찾아야 합니다.</p><div class="pain-result">관원별 정보, 한 화면에서 연결 <span>↗</span></div></article>
+      <article class="pain-card"><div class="round-ico peach">📨</div><h3>반복되는 학부모 연락</h3><p>휴강일, 준비물, 차량 시간처럼 자주 받는 질문을 안내하는 데도 많은 시간이 들어갑니다.</p><div class="pain-result">자주 묻는 질문은 자동 안내 <span>↗</span></div></article>
+      <article class="pain-card"><div class="round-ico mint">🧾</div><h3>늦게 보이는 운영 현황</h3><p>미납, 차량 탑승, 심사 대상, 수입·지출을 따로 확인하면 오늘 필요한 일이 바로 보이지 않습니다.</p><div class="pain-result">오늘 확인할 일을 한곳에 <span>↗</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="modules">
+ <div class="wrap">
+   <div class="section-intro"><span class="kicker">6 CORE MODULES</span><h2>여섯 가지 핵심 업무를<br>한 곳에서 관리합니다.</h2><p>지금은 <strong>기획 중인 기능</strong>입니다. 각 카드를 누르면 실제로 사용할 수 있는 화면 예시로 이동합니다.</p></div>
+   <div class="feature-grid">
+     <a class="feature-card" href="#demo" data-goto="attendance"><span class="feature-number">01 / ATTENDANCE</span><div class="feature-icon green-bg">✅</div><h3>출결 관리</h3><p>반별 출석 체크, 결석 기록, 학부모 알림까지 한 번에.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+     <a class="feature-card" href="#demo" data-goto="vehicle"><span class="feature-number">02 / VEHICLE</span><div class="feature-icon blue-bg">🚌</div><h3>차량 운행</h3><p>노선·탑승 명단을 확인하고 승차·하차를 기록합니다.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+     <a class="feature-card" href="#demo" data-goto="promotion"><span class="feature-number">03 / PROMOTION</span><div class="feature-icon purple-bg">🥋</div><h3>승급 심사</h3><p>심사 대상부터 평가 결과, 띠·급수 이력을 연결합니다.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+     <a class="feature-card" href="#demo" data-goto="finance"><span class="feature-number">04 / FINANCE</span><div class="feature-icon orange-bg">📒</div><h3>내부 회계</h3><p>수련비와 지출 내역을 장부로 관리하고 운영 현황을 봅니다.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+     <a class="feature-card" href="#demo" data-goto="counseling"><span class="feature-number">05 / COUNSELING</span><div class="feature-icon pink-bg">💬</div><h3>학부모 상담</h3><p>반복 질문은 빠르게 안내하고 중요한 문의는 관장님께 전달합니다.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+     <a class="feature-card" href="#demo" data-goto="faq"><span class="feature-number">06 / FAQ</span><div class="feature-icon yellow-bg">💡</div><h3>자주 묻는 질문</h3><p>도장별 수업 일정·준비물·운영 안내를 한 번만 정리합니다.</p><span class="feature-link">화면 미리 보기 <span>↗</span></span></a>
+   </div>
+   <p class="subnote">기본 기능도 함께 설계합니다: 관원·학부모 명부, 반 관리, 수련비·미납 관리, 공지, 직원별 접근 권한, 운영 대시보드.</p>
+ </div>
+</section>
+
+<section class="section demo-section white" id="demo">
+ <div class="wrap">
+  <div class="section-intro"><span class="kicker">INTERACTIVE MOCKUPS</span><h2>어떤 화면이 만들어질까요?</h2><p>아래 탭을 선택하고 버튼을 직접 눌러보세요. <strong>6개의 간단한 체험 화면</strong>을 만들었습니다. 데이터는 모두 가상이며 실제 기록·알림은 발생하지 않습니다.</p></div>
+  <div class="demo-shell">
+   <div class="demo-tabs" role="tablist" aria-label="체험할 기능 선택">
+    <button type="button" class="demo-tab active" id="tab-attendance" role="tab" aria-selected="true" aria-controls="panel-attendance" data-tab="attendance"><span>✓</span> 출결</button>
+    <button type="button" class="demo-tab" id="tab-vehicle" role="tab" aria-selected="false" aria-controls="panel-vehicle" tabindex="-1" data-tab="vehicle"><span>▤</span> 차량</button>
+    <button type="button" class="demo-tab" id="tab-promotion" role="tab" aria-selected="false" aria-controls="panel-promotion" tabindex="-1" data-tab="promotion"><span>★</span> 승급</button>
+    <button type="button" class="demo-tab" id="tab-finance" role="tab" aria-selected="false" aria-controls="panel-finance" tabindex="-1" data-tab="finance"><span>₩</span> 회계</button>
+    <button type="button" class="demo-tab" id="tab-counseling" role="tab" aria-selected="false" aria-controls="panel-counseling" tabindex="-1" data-tab="counseling"><span>☏</span> 상담</button>
+    <button type="button" class="demo-tab" id="tab-faq" role="tab" aria-selected="false" aria-controls="panel-faq" tabindex="-1" data-tab="faq"><span>?</span> FAQ</button>
+   </div>
+
+   <div class="demo-panel" id="panel-attendance" role="tabpanel" aria-labelledby="tab-attendance" data-panel="attendance">
+    <div class="demo-guide"><span class="guide-step">01 / 출결</span><h3>출석은 빠르게, 기록은 정확하게.</h3><p>수업에 들어온 아이를 터치하면 바로 출석 처리합니다. 반별 현황을 확인하고, 학부모에게 출석 알림을 보내는 흐름을 구상했습니다.</p><ul><li>반별·날짜별 출석 현황</li><li>지각·결석 등 상태 구분</li><li>보호자 출결 알림 연계</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 오른쪽에서 ‘출석 처리’를 눌러보세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 출결 관리</span><span class="mock-mode">관장 / 사범 화면</span></div><div class="mock-content"><div class="mock-heading"><div><h4>오늘의 출석부</h4><p>햇살반 · 오후 4:00 · 가상 수업</p></div><span class="date-pill">10월 29일</span></div>
+    <div class="metric-row"><div class="metric"><span>출석</span><strong id="attendance-present">18명</strong></div><div class="metric"><span>전체</span><strong>24명</strong></div><div class="metric"><span>확인 대기</span><strong id="attendance-waiting">6명</strong></div></div>
+    <div class="mock-list" id="attendance-list"><div class="list-head"><b>관원</b><span>출석 상태</span></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-one">김</span><div><strong>김하늘</strong><small>햇살반</small></div></div><button class="small-action" data-attend="haneul" type="button">출석 처리</button></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-two">박</span><div><strong>박도윤</strong><small>햇살반</small></div></div><button class="small-action" data-attend="doyun" type="button">출석 처리</button></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-three">이</span><div><strong>이서준</strong><small>햇살반</small></div></div><span class="mini-badge done">✓ 출석 완료</span></div>
+    </div><div class="mock-foot" id="attendance-result" aria-live="polite">출석 시 보호자에게 알림을 보내는 흐름을 계획하고 있습니다.</div>
+    </div></div>
+   </div>
+
+   <div class="demo-panel" id="panel-vehicle" role="tabpanel" aria-labelledby="tab-vehicle" data-panel="vehicle" hidden>
+    <div class="demo-guide"><span class="guide-step">02 / 차량</span><h3>누가 탔는지, 누가 아직인지 한눈에.</h3><p>노선별 탑승 명단을 확인하고 승차·하차 여부를 체크합니다. 학부모가 차량 미탑승을 신청하는 기능도 포함합니다.</p><ul><li>차량·기사·노선·정류장 등록</li><li>승차·하차 상태 기록</li><li>결석·미탑승 변경 사항 확인</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 탑승 확인 버튼이나 노선 선택을 눌러보세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 차량 운행</span><span class="mock-mode">기사 / 담당 사범 화면</span></div><div class="mock-content">
+    <div class="mock-heading"><div><h4>하원 차량 탑승</h4><p>운행표를 기준으로 탑승 확인</p></div><span class="status-chip">가상 운행</span></div>
+    <label class="input-label" for="route-select">확인할 노선</label><select id="route-select" class="mock-select"><option value="a">A노선 · 오후 4:30</option><option value="b">B노선 · 오후 5:30</option></select>
+    <div class="route-track"><div><b>도장</b><small>출발</small></div><span class="route-line"></span><div><b>1차 정류장</b><small>예시 경유지</small></div><span class="route-line"></span><div><b>마지막 정류장</b><small>도착</small></div></div>
+    <div class="metric-row"><div class="metric"><span>탑승 확인</span><strong id="vehicle-boarded">3명</strong></div><div class="metric"><span>총 대상</span><strong id="vehicle-total">6명</strong></div><div class="metric"><span>확인 대기</span><strong id="vehicle-waiting">3명</strong></div></div>
+    <div class="mock-list" id="vehicle-list">
+      <div class="list-head"><b>탑승 대상</b><span>상태</span></div>
+      <div class="person-row vehicle-person" data-route="a"><div class="person-info"><span class="person-avatar av-one">정</span><div><strong>정민서</strong><small>1차 정류장</small></div></div><button class="small-action" data-board="minseo" type="button">탑승 확인</button></div>
+      <div class="person-row vehicle-person" data-route="a"><div class="person-info"><span class="person-avatar av-four">최</span><div><strong>최윤재</strong><small>마지막 정류장</small></div></div><button class="small-action" data-board="yunjae" type="button">탑승 확인</button></div>
+      <div class="person-row vehicle-person" data-route="b" hidden><div class="person-info"><span class="person-avatar av-two">조</span><div><strong>조지안</strong><small>2차 정류장</small></div></div><button class="small-action" data-board="jian" type="button">탑승 확인</button></div>
+      <div class="person-row vehicle-person" data-route="b" hidden><div class="person-info"><span class="person-avatar av-three">유</span><div><strong>유다온</strong><small>마지막 정류장</small></div></div><button class="small-action" data-board="daon" type="button">탑승 확인</button></div>
+    </div><div class="mock-foot" id="vehicle-result" aria-live="polite">MVP: 탑승 기록 중심 · 실시간 GPS 추적은 추후 검토</div>
+    </div></div>
+   </div>
+
+   <div class="demo-panel" id="panel-promotion" role="tabpanel" aria-labelledby="tab-promotion" data-panel="promotion" hidden>
+    <div class="demo-guide"><span class="guide-step">03 / 승급</span><h3>심사 대상부터 결과 기록까지 연결합니다.</h3><p>승급 시기를 확인하고 심사 결과를 기록합니다. 아이별 띠·급수와 평가 이력을 모아 다음 심사를 준비하기 쉽게 만듭니다.</p><ul><li>승급 후보 및 접수 현황</li><li>평가 항목·점수·합격 처리</li><li>급수 이력과 학부모 안내</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 가상 심사 결과를 ‘합격 기록’으로 바꿔보세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 승급 심사</span><span class="mock-mode">관장 / 평가 담당</span></div><div class="mock-content">
+    <div class="mock-heading"><div><h4>11월 정기 승급 심사</h4><p>심사 결과 기록 · 예시 일정</p></div><span class="status-chip purple">심사 준비</span></div>
+    <div class="metric-row"><div class="metric"><span>대상</span><strong>12명</strong></div><div class="metric"><span>결과 기록</span><strong id="promotion-completed">8명</strong></div><div class="metric"><span>미기록</span><strong id="promotion-pending">4명</strong></div></div>
+    <div class="mock-list"><div class="list-head"><b>심사 대상</b><span>평가 결과</span></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-five">한</span><div><strong>한시우</strong><small>노란띠 → 초록띠</small></div></div><button type="button" class="small-action" data-promote="siwoo">합격 기록</button></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-six">임</span><div><strong>임채원</strong><small>초록띠 → 파란띠</small></div></div><button type="button" class="small-action" data-promote="chaewon">합격 기록</button></div>
+      <div class="person-row"><div class="person-info"><span class="person-avatar av-three">서</span><div><strong>서지호</strong><small>평가 완료</small></div></div><span class="mini-badge done">✓ 기록 완료</span></div>
+    </div><div class="mock-foot" id="promotion-result" aria-live="polite">도장 자체 심사 기준을 설정할 수 있도록 계획합니다.</div>
+    </div></div>
+   </div>
+
+   <div class="demo-panel" id="panel-finance" role="tabpanel" aria-labelledby="tab-finance" data-panel="finance" hidden>
+    <div class="demo-guide"><span class="guide-step">04 / 내부 회계</span><h3>도장 돈의 흐름을 쉽게 파악합니다.</h3><p>수련비·심사비·용품 판매 수입과 임대료·인건비·차량비 등의 지출을 한 장부에 연결합니다. <strong>회계 화면은 관장 등 승인된 사람에게만</strong> 보여줍니다.</p><ul><li>수입·지출·미납 통합 조회</li><li>영수증 및 증빙 첨부(계획)</li><li>월별 운영 차액 확인</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 예시 지출을 한 건 등록해 보세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 내부 회계</span><span class="mock-mode">🔒 관장 전용 화면</span></div><div class="mock-content">
+    <div class="mock-heading"><div><h4>이번 달 도장 장부</h4><p>수입·지출 현황 · 예시 금액</p></div><span class="date-pill">2026년 10월</span></div>
+    <div class="finance-overview"><div><span>수입</span><strong id="finance-income">7,860,000원</strong></div><div><span>지출</span><strong id="finance-expense">4,320,000원</strong></div><div class="profit-card"><span>운영 차액</span><strong id="finance-diff">+3,540,000원</strong></div></div>
+    <div class="mock-list" id="finance-list"><div class="list-head"><b>최근 거래</b><span>금액</span></div>
+      <div class="person-row"><div class="finance-item"><strong>10월 수련비 수납</strong><small>수입 · 교육비</small></div><b class="amount-plus">+150,000원</b></div>
+      <div class="person-row"><div class="finance-item"><strong>차량 유지비</strong><small>지출 · 운행비</small></div><b class="amount-minus">−120,000원</b></div>
+      <div class="person-row"><div class="finance-item"><strong>심사비 수납</strong><small>수입 · 승급 심사</small></div><b class="amount-plus">+50,000원</b></div>
+    </div><button id="add-expense" type="button" class="full-action">+ 예시 지출 8만원 기록</button><div class="mock-foot" id="finance-result" aria-live="polite">장부 기록용 MVP입니다. 세무 신고·법정 회계 처리 대체 기능은 아닙니다.</div>
+    </div></div>
+   </div>
+
+   <div class="demo-panel" id="panel-counseling" role="tabpanel" aria-labelledby="tab-counseling" data-panel="counseling" hidden>
+    <div class="demo-guide"><span class="guide-step">05 / 학부모 상담</span><h3>간단한 안내는 자동으로, 중요한 일은 사람이.</h3><p>학부모가 반복적으로 묻는 내용은 도장의 공지·FAQ를 바탕으로 안내하고, 불만·갈등·사고·환불 등은 담당자에게 넘깁니다.</p><ul><li>학부모 문의 접수 및 분류</li><li>FAQ 기반 안내 초안</li><li>관장님 상담함으로 이관</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 질문 세 가지를 눌러 자동응답 흐름을 확인하세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 학부모 상담</span><span class="mock-mode">학부모 채팅 예시</span></div><div class="mock-content">
+    <div class="mock-heading"><div><h4>도장 안내 도우미</h4><p>등록된 정보로 먼저 안내해요</p></div><span class="status-chip">자동 안내 목업</span></div>
+    <div class="chat-box" id="chat-box" aria-live="polite" aria-relevant="additions"><div class="chat-bubble bot"><strong>TK 안내 도우미</strong><p>안녕하세요! 무엇이 궁금하세요? 아래 예시 질문을 선택해 보세요.</p></div></div>
+    <div class="question-label">예시 질문 선택</div><div class="suggestions"><button type="button" data-question="schedule">이번 토요일 수업 있나요?</button><button type="button" data-question="private">우리 아이 출석 확인해 주세요</button><button type="button" data-question="sensitive">아이가 친구와 다퉜어요</button></div>
+    <div class="handoff-status" id="handoff-status" role="status">민감한 문의는 자동 결론 없이 담당자에게 전달하는 방식입니다.</div>
+    </div></div>
+   </div>
+
+   <div class="demo-panel" id="panel-faq" role="tabpanel" aria-labelledby="tab-faq" data-panel="faq" hidden>
+    <div class="demo-guide"><span class="guide-step">06 / FAQ</span><h3>같은 질문에 같은 답을 여러 번 하지 않도록.</h3><p>도장 운영 안내를 한 곳에 정리해 학부모가 직접 찾을 수 있게 합니다. 이 내용을 학부모 상담의 안내 근거로도 활용할 계획입니다.</p><ul><li>수업 시간·휴관·준비물</li><li>결석·차량·승급 안내</li><li>도장별 내용과 수정 권한 관리</li></ul><div class="guide-hint">👇 <strong>체험:</strong> 검색하거나 질문을 펼쳐보세요.</div></div>
+    <div class="mock-app"><div class="mock-top"><span class="mock-brand"><span class="tiny-square">TK</span> 자주 묻는 질문</span><span class="mock-mode">학부모 안내 화면</span></div><div class="mock-content">
+    <div class="mock-heading"><div><h4>무엇이 궁금하신가요?</h4><p>자주 묻는 질문을 모았습니다</p></div><span class="status-chip blue">FAQ 예시</span></div>
+    <label class="sr-only" for="faq-search">FAQ 검색</label><input class="faq-search" id="faq-search" type="search" placeholder="예: 수업, 준비물, 차량, 결석">
+    <div class="faq-list" id="faq-list">
+      <details data-faq="수업 시간 요일 편성" open><summary>수업 시간은 어떻게 확인하나요?</summary><div>도장이 등록한 반별 시간표에서 확인할 수 있도록 계획합니다. 이 목업에는 실제 도장 수업 시간이 입력되어 있지 않습니다.</div></details>
+      <details data-faq="준비물 도복 운동 물통"><summary>첫 수업 때 준비할 것은 무엇인가요?</summary><div>예시 안내: 활동하기 편한 복장과 개인 물통을 준비해 주세요. 실제 안내 내용은 관장님이 직접 등록할 수 있습니다.</div></details>
+      <details data-faq="결석 빠지는 날 출석 문의"><summary>아이가 결석하면 어떻게 하나요?</summary><div>학부모 앱에서 결석 예정일과 사유를 전달하고, 담당자가 출석부에서 확인하는 흐름을 구상했습니다.</div></details>
+      <details data-faq="차량 탑승 노선 시간 변경"><summary>오늘만 차량을 이용하지 않을 수 있나요?</summary><div>일시 미탑승 신청 → 담당자 확인 → 차량 탑승 명단 반영의 흐름을 계획합니다.</div></details>
+      <details data-faq="승급 심사 띠 급수"><summary>승급 심사는 언제 진행하나요?</summary><div>도장에서 확정한 심사 일정과 대상 여부를 학부모 화면에 안내하도록 계획합니다.</div></details>
+      <details data-faq="수련비 회비 납부 미납 결제"><summary>수련비 납부 내역은 어디서 보나요?</summary><div>보호자 본인 확인 후 연결된 자녀의 납부 내역을 조회하도록 설계합니다. 다른 관원의 정보는 볼 수 없습니다.</div></details>
+    </div><div class="faq-empty" id="faq-empty" hidden>검색 결과가 없어요. 다른 단어로 찾아보세요.</div><div class="mock-foot">FAQ 답변은 모두 가상 예시이며 실제 운영 정책이 아닙니다.</div>
+    </div></div>
+   </div>
+
+  </div>
+  <div class="demo-disclaimer"><span class="demo-disclaimer-icon">ⓘ</span><span>여기는 <strong>개발 전 기획을 보여주는 클릭형 목업</strong>입니다. 버튼을 눌러도 서버에 저장되지 않으며, 카카오톡 알림·결제·실제 AI 응답은 실행되지 않습니다.</span></div>
+ </div>
+</section>
+
+<section class="section connection">
+ <div class="wrap">
+  <div class="section-intro"><span class="kicker">CONNECTED WORKFLOW</span><h2>각 기능이 따로 놀지 않습니다.</h2><p>한 번 기록한 정보를 다른 업무에서 다시 사용할 수 있다는 점이 핵심입니다.</p></div>
+  <div class="journey">
+    <div class="journey-top"><span class="journey-avatar">👦🏻</span><div><strong>가상의 관원 ‘도윤’의 하루</strong><span>서비스가 완성되었을 때의 사용 흐름 예시</span></div></div>
+    <div class="journey-steps">
+      <div class="journey-item"><span class="journey-icon">✅</span><div><b>수업 도착</b><p>사범님이 출석 체크</p></div></div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-item"><span class="journey-icon">📲</span><div><b>학부모 확인</b><p>출석 알림 자동 연계</p></div></div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-item"><span class="journey-icon">🚌</span><div><b>하원 차량</b><p>탑승 여부 확인</p></div></div>
+      <div class="journey-arrow" aria-hidden="true">→</div>
+      <div class="journey-item"><span class="journey-icon">📋</span><div><b>운영 기록</b><p>관원 정보에 이력 연결</p></div></div>
+    </div>
+  </div>
+  <div class="permission-grid">
+    <article><span>👤</span><h3>관장님</h3><p>전체 운영 현황, 회계, 직원 권한, 상담 관리</p></article>
+    <article><span>🥋</span><h3>사범님·차량 담당자</h3><p>맡은 반의 출결, 심사, 차량 관련 업무</p></article>
+    <article><span>👨‍👩‍👧</span><h3>학부모</h3><p>본인 자녀의 출결·안내·상담 등 필요한 정보만</p></article>
+  </div>
+  <p class="privacy-note">🔒 도장별 데이터는 서로 분리하며, 아이·학부모 정보는 권한 있는 사용자만 접근하도록 설계합니다. 공개 GitHub Pages에는 실제 관원 정보를 올리지 않습니다.</p>
+ </div>
+</section>
+
+<section class="section white" id="plan">
+ <div class="wrap">
+  <div class="section-intro"><span class="kicker">MVP DEVELOPMENT PLAN</span><h2>첫 버전은 작게 시작하고,<br>도장에 맞게 키워갑니다.</h2><p>여섯 모듈 모두 첫 제품의 범위에 포함하되, 실제 구현은 순서대로 검증합니다. 아래 일정은 날짜가 확정된 약속이 아닌 제안입니다.</p></div>
+  <div class="roadmap-grid">
+    <article class="roadmap-card"><span class="roadmap-step">STEP 01</span><h3>도장 운영의 뼈대</h3><p>관원·학부모 명부와 권한을 먼저 연결합니다. 매일 자주 사용하는 출결·수련비·내부 장부부터 확인합니다.</p><div class="roadmap-tags"><span>관원 DB</span><span>출결</span><span>수납·회계</span></div></article>
+    <article class="roadmap-card"><span class="roadmap-step">STEP 02</span><h3>현장 업무의 연결</h3><p>차량 탑승표와 승급 심사 결과가 관원 정보에 연결되도록 만듭니다. 휴대폰·태블릿 사용성을 점검합니다.</p><div class="roadmap-tags"><span>차량</span><span>승급</span><span>현장 피드백</span></div></article>
+    <article class="roadmap-card"><span class="roadmap-step">STEP 03</span><h3>학부모 소통 완성</h3><p>FAQ와 상담 이관, 앱 알림을 연결합니다. 카카오 채널 연동은 계약·정책·비용을 확인한 후 적용합니다.</p><div class="roadmap-tags"><span>FAQ</span><span>상담</span><span>알림</span></div></article>
+  </div>
+  <div class="scope-box"><span class="scope-symbol">↗</span><div><h3>나중에 고려할 기능</h3><p>실시간 차량 GPS, 자동 결제 연동, 세무 신고 연계, 고급 경영 통계, 앱스토어 정식 배포 등은 초기 사용 경험을 검증한 뒤 결정하려고 합니다.</p></div></div>
+ </div>
+</section>
+
+<section class="section pilot-section">
+ <div class="wrap">
+  <div class="pilot-card">
+    <div><span class="pilot-kicker">FIRST PARTNER DOJANG</span><h2>첫 도장은 함께 만들고,<br>함께 더 편해지도록.</h2><p>처음부터 완벽한 제품을 약속하기보다, 실제로 시간을 아껴주는 기능을 함께 찾아 개선하고 싶습니다. 친구 도장은 기본 서비스 이용료를 받지 않는 파일럿 파트너로 생각하고 있습니다.</p></div>
+    <div class="pilot-benefits">
+      <div><span>🎁</span><strong>기본 서비스 무료 제공 계획</strong><small>문자·알림톡 등 외부 사용량 비용은 별도 협의</small></div>
+      <div><span>🧩</span><strong>도장 운영 방식에 맞춘 개선</strong><small>지금 사용 중인 도구와 불편한 점을 함께 확인</small></div>
+      <div><span>🔐</span><strong>실제 도장 데이터는 안전하게</strong><small>테스트는 가상 데이터부터, 정식 적용 전 동의·보안 점검</small></div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section class="section white" id="feedback">
+ <div class="wrap feedback-grid">
+  <div class="feedback-side"><span class="kicker">YOUR FEEDBACK MATTERS</span><h2>관장님이라면<br>어떤 기능이 가장 필요하실까요?</h2><p>이 페이지는 기능을 확정한 제안서가 아니라, 함께 방향을 정해보기 위한 초안입니다. 어려운 용어 없이 편하게 의견을 남겨 주세요.</p><div class="feedback-tip">💡 아래에서 선택 후 <strong>‘의견 복사’</strong>를 누르면 카카오톡 대화창에 붙여넣을 수 있어요. 서버로 자동 제출되지는 않습니다.</div></div>
+  <form class="feedback-form" id="feedback-form">
+    <fieldset><legend>가장 먼저 쓰고 싶은 기능은? <small>여러 개 선택 가능</small></legend>
+      <div class="check-grid">
+       <label><input type="checkbox" name="feature" value="출결 관리"><span>✅ 출결 관리</span></label>
+       <label><input type="checkbox" name="feature" value="차량 운행"><span>🚌 차량 운행</span></label>
+       <label><input type="checkbox" name="feature" value="승급 심사"><span>🥋 승급 심사</span></label>
+       <label><input type="checkbox" name="feature" value="내부 회계"><span>📒 내부 회계</span></label>
+       <label><input type="checkbox" name="feature" value="학부모 상담"><span>💬 학부모 상담</span></label>
+       <label><input type="checkbox" name="feature" value="FAQ"><span>💡 FAQ</span></label>
+      </div>
+    </fieldset>
+    <div class="form-field"><label for="existing-tools">지금은 주로 어떤 방법으로 관리하시나요?</label><select id="existing-tools"><option value="">선택해 주세요 (선택 사항)</option><option>종이 출석부 / 수기 기록</option><option>엑셀 / 구글 시트</option><option>기존 도장 관리 프로그램</option><option>여러 방법을 함께 사용</option><option>기타</option></select></div>
+    <div class="form-field"><label for="free-comment">가장 번거로운 업무나 원하는 기능이 있나요?</label><textarea id="free-comment" rows="5" maxlength="1200" placeholder="예: 차량 탑승 변경을 학부모가 직접 신청해주면 좋겠어요. 실제 아이들의 이름이나 연락처는 적지 말아주세요."></textarea></div>
+    <button type="submit" class="btn primary copy-button" id="copy-feedback">의견 복사해서 카톡으로 보내기 <span aria-hidden="true">↗</span></button>
+    <div class="copy-result" id="copy-result" role="status" aria-live="polite"></div>
+    <p class="privacy-caption">이 페이지는 의견을 서버로 수집하지 않습니다. 복사된 내용을 직접 대화창에 붙여넣어 보내주세요. 실제 아동 개인정보는 입력하지 마세요.</p>
+  </form>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div><a href="#top" class="logo"><span class="logo-mark">TK<span class="logo-dot">.</span></span><span class="logo-name">도장 운영 파트너</span></a><p>MVP 기획안 v0.1 · 2026.10.29 · 공개 공유용</p><p>모든 이름·일정·금액은 설명을 위한 가상 데이터입니다. 구현·서비스 제공이 확정된 상태가 아닙니다.</p></div><div class="footer-right"><a href="#demo">화면 체험 ↑</a><a href="#feedback">의견 남기기 ↑</a><span>© TK Project</span></div></div></footer>
+</body>
+</html>
